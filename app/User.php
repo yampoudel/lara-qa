@@ -36,4 +36,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //defining relation of users with questions
+
+    public function question(){
+        return $this->hasMany(Question::class);
+    }
+    
+    //Defining Mutator which helps to alter the data before send to the database
+
+    public function setTitleAttribute($value){
+        $this->attributes['title']=$value;
+        $this->attributes['slug']=Str::slug($value);
+    }
 }
