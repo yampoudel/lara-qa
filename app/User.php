@@ -39,14 +39,11 @@ class User extends Authenticatable
 
     //defining relation of users with questions
 
-    public function question(){
+    public function questions(){
         return $this->hasMany(Question::class);
     }
     
     //Defining Mutator which helps to alter the data before send to the database
 
-    public function setTitleAttribute($value){
-        $this->attributes['title']=$value;
-        $this->attributes['slug']=Str::slug($value);
-    }
+    
 }
