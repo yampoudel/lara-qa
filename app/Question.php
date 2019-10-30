@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+//for using string
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 
