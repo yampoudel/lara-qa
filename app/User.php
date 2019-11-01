@@ -45,5 +45,8 @@ class User extends Authenticatable
     
     //Defining Mutator which helps to alter the data before send to the database
 
-    
+    public function getUrlAttribute(){
+      //  return route("question.show", $this->id);
+        return "#";
+    }
 }
