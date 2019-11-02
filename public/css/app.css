@@ -11100,3 +11100,46 @@ a.text-dark:focus {
   }
 }
 
+.navbar-laravel {
+  background-color: #fff;
+  background-origin: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.counters {
+  margin-left: 30px;
+  margin-right: 50px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.counters strong {
+  display: block;
+}
+
+.counters .answer {
+  width: 60;
+  height: 60;
+  border: 1px solid red;
+}
+
+.counters .status.unanswered {
+  border: none;
+}
+
+.counters .status.answered {
+  border: 1px solid #5fbb7e;
+  color: #5fbb7e;
+}
+
+.counters .status.answered-accepted {
+  background: #5fbb7e;
+}
+
+.counters .view {
+  margin-top: 10px;
+}
+
+.counters .vote {
+  margin-bottom: 10px;
+}
+
