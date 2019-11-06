@@ -18,4 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('questions', 'QuestionsController');
+
+//defining the route except show route 
+Route::resource('questions', 'QuestionsController')->except('show');
+
+//Here we are using the show route separately because we need to use slug instead of id  to make url seo friendly
+Route::get('/questions/{slug}', 'QuestionsController@show')->name( 'questions.show' );
